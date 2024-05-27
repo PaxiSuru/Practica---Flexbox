@@ -8,17 +8,30 @@
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: bisque;
+    background-color: rgb(255, 226, 192);
 }
 
 /* Dar estulos a nuestra card */
 
 .card-container{
     display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
     justify-content: center;
     max-width: 1200px;
     padding: 24px;
     gap: 24px;
+}
+
+header{
+    background-color: rgb(255, 251, 243);
+    text-align: center;
+    align-content: center;
+    display: block;
+    width: auto;
+    height: auto;
+    border-radius: 0%;
+    
 }
 
 ul {
@@ -32,13 +45,22 @@ ul {
     flex-basis: 30%;
     padding: 12px;
     border-radius: 24px;
-    background-color: rgb(250, 248, 239)
+    background-color: rgb(250, 248, 239);
+    box-shadow: /* dezX dezY, blur, expanción color; */ 5px 10px 10px 0 rgb(164, 137, 106);
+    transition: transform 1s;
+    cursor: pointer;
 }
 
 .pokemon-image {
     width: 100px;
     height: 100px;
     border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(105%); /* Valores positivos hacia abajo y valores negativos hacia arriba */
+    background-color: rgb(252, 255, 207);
 }
 
 .pokemon-info {
